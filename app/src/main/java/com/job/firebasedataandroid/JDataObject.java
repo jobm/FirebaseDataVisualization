@@ -17,9 +17,7 @@ public class JDataObject {
         return last_name;
     }
 
-    public int getId() {
-        return id;
-    }
+    public int getId() { return id; }
 
     public String getCompany_name() {
         return company_name;
