@@ -7,11 +7,40 @@ public class CardDataHolder {
     int id;
     String company_name;
     String country;
-    String credit_card;
+    long credit_card;
     String email;
     String first_name;
     String last_name;
-    CardDataHolder(int id,String company_name,String country, String credit_card,String email, String first_name, String last_name){
+
+    public int getId() {
+        return id;
+    }
+
+    public String getLast_name() {
+        return last_name;
+    }
+
+    public String getCompany_name() {
+        return company_name;
+    }
+
+    public String getCountry() {
+        return country;
+    }
+
+    public long getCredit_card() {
+        return credit_card;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getFirst_name() {
+        return first_name;
+    }
+
+    CardDataHolder(int id,String company_name,String country, long credit_card,String email, String first_name, String last_name){
         this.id = id;
         this.company_name = company_name;
         this.country = country;

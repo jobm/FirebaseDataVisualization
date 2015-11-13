@@ -7,11 +7,14 @@ public class JDataObject {
     int id;
     String company_name;
     String country;
-    String credit_card;
+    long credit_card;
     String email;
     String first_name;
     String last_name;
 
+    public JDataObject(){
+
+    }
 
     public String getLast_name() {
         return last_name;
@@ -27,7 +30,7 @@ public class JDataObject {
         return country;
     }
 
-    public String getCredit_card() {
+    public long getCredit_card() {
         return credit_card;
     }
 
@@ -39,7 +42,5 @@ public class JDataObject {
         return first_name;
     }
 
-    public JDataObject(){
 
-    }
 }
