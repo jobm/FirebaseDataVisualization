@@ -13,25 +13,28 @@ import java.util.List;
 public class RVAAdapter extends RecyclerView.Adapter<RVAAdapter.JDataObjectViewHolder>{
 
     public static class JDataObjectViewHolder extends RecyclerView.ViewHolder{
+
         CardView cv;
 
         TextView companyName;
         TextView country;
         TextView creditCard;
         TextView email;
-        TextView firstName;
-        TextView lastName;
+        TextView name;
+//        TextView lastName;
         JDataObjectViewHolder(View itemView) {
             super(itemView);
+
             cv = (CardView)itemView.findViewById(R.id.cv);
-            firstName = (TextView)itemView.findViewById(R.id.first_name);
-            lastName = (TextView)itemView.findViewById(R.id.textView);
+            name = (TextView)itemView.findViewById(R.id.first_name);
+//            lastName = (TextView)itemView.findViewById(R.id.textView);
             email = (TextView)itemView.findViewById(R.id.textView2);
             creditCard = (TextView)itemView.findViewById(R.id.textView3);
             country = (TextView)itemView.findViewById(R.id.textView4);
             companyName = (TextView)itemView.findViewById(R.id.textView5);
         }
     }
+
     List<CardDataHolder> dataObj;
 
     RVAAdapter(List<CardDataHolder> dataObj){
@@ -53,22 +56,20 @@ public class RVAAdapter extends RecyclerView.Adapter<RVAAdapter.JDataObjectViewH
 
     @Override
     public void onBindViewHolder(JDataObjectViewHolder dataObjectViewHolder, int i) {
-        dataObjectViewHolder.firstName.setText(dataObj.get(i).first_name);
-        dataObjectViewHolder.lastName.setText(dataObj.get(i).last_name);
+
+        dataObjectViewHolder.name.setText(dataObj.get(i).first_name+" "+dataObj.get(i).last_name);
+//        dataObjectViewHolder.lastName.setText(dataObj.get(i).last_name);
         dataObjectViewHolder.companyName.setText(dataObj.get(i).company_name);
         dataObjectViewHolder.country.setText(dataObj.get(i).country);
         dataObjectViewHolder.email.setText(dataObj.get(i).email);
         dataObjectViewHolder.creditCard.setText(String.valueOf(dataObj.get(i).credit_card));
-//        speakerViewHolder.personName.setText(speakers.get(i).name);
-//        speakerViewHolder.personAge.setText(speakers.get(i).age);
-//        speakerViewHolder.personPhoto.setImageResource(speakers.get(i).photoId);
+
     }
 
     @Override
     public int getItemCount() {
         return dataObj.size();
     }
-
 
 }
 

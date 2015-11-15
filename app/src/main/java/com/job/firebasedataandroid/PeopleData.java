@@ -29,14 +29,13 @@ public class PeopleData extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_people_data);
         Firebase.setAndroidContext(this);
-//        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
 
         rv = (RecyclerView)findViewById(R.id.rv);
         LinearLayoutManager llm = new LinearLayoutManager(this);
+
         rv.setLayoutManager(llm);
         rv.setHasFixedSize(true);
-        data_set = new ArrayList<>();
+
         getData("https://hackfest.firebaseio.com/hackfest");
         initializeAdapter();
     }
@@ -66,7 +65,7 @@ public class PeopleData extends AppCompatActivity {
                             object.getFirst_name(),
                             object.getLast_name()
                     ));
-//                    Log.d("RES::",""+object.getFirst_name());
+
                 }
 
             }
@@ -79,7 +78,5 @@ public class PeopleData extends AppCompatActivity {
         });
 
     }
-
-
 
 }
